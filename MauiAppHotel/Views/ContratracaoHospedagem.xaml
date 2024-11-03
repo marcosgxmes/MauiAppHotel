@@ -4,30 +4,39 @@
              x:Class="MauiAppHotel.Views.ContratracaoHospedagem"
              Title="ContratracaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray100}">
+             BackgroundColor="#011638">
     
     <VerticalStackLayout VerticalOptions="Center"
-                         Padding="10">
+                         Padding="10" >
         <Label 
-            Text="Calcular Diária"
-            FontFamily="Poppins"
-            FontSize="50"
-            TextColor="{StaticResource Primary}" />
+            Text="Agendar Diária"
+            FontFamily="PoppinsBold"
+            FontSize="35"
+            VerticalOptions="Center" 
+            Margin="0,0,0,20"
+            HorizontalOptions="Center"
+            TextColor="#FFF" />
          
         
-        <Frame Padding="10">
+        <Frame Padding="10"
+               BackgroundColor="#011638"
+               >
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
-                      ColumnDefinitions="*, *, 2*">
+                      ColumnDefinitions="*, *, 2*"
+                      Margin="0,20,0,20">
 
                     <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos:" />
+                           Text="Adultos:"
+                           FontFamily="PoppinsLight"/>
 
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:" />
+                           Text="Crianças:"
+                           FontFamily="PoppinsLight"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="#FFF"
+                           FontFamily="PoppinsLight"
                            Text="{Binding Value}" 
                            BindingContext="{x:Reference stp_adults}"/>
 
@@ -38,7 +47,8 @@
                              Increment="1" />
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="#FFF"
+                           FontFamily="PoppinsLight"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_kids}"/>
 
@@ -49,31 +59,52 @@
                              Increment="1" />
                 </Grid>
 
-                <Label Text="Escolha a Suíte" />
+                <Label Text="Selecionar Suíte"
+                       FontFamily="PoppinsLight"
+                       FontSize="16" />
 
                 <Picker x:Name="pck_room"
-                        Title="Selecionar a acomodação" />
+                        Title="Escolha uma acomodação" />
                 
-                <Frame Padding="10"
-                        Margin="10">
+                <Frame BackgroundColor="#011638">
                     <VerticalStackLayout>
-                        <Label Text="Período da Estadía" />
+                        <Label Text="Período da estadía"
+                               FontFamily="PoppinsLight"
+                               Margin="0,0,0,10"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
                         
                         <HorizontalStackLayout>
-                            <Label Text="Check-In:" />
+                            <Label Text="Check-In:"
+                                   Margin="0,10,30,0"
+                                   HorizontalOptions="Center"                                  />
                             <DatePicker x:Name="dtpck_checkin"
-                                        Format="dd/mm/yyyy" />
+                                        Format="dd/mm/yyyy"
+                                        Background="#000" />
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>
-                            <Label Text="Check-Out:" />
+                            <Label Text="Check-Out:"
+                                   Margin="0,10,20,0"
+                                   HorizontalOptions="CenterAndExpand"/>
                             <DatePicker x:Name="dtpck_checkout"
-                                        Format="dd/mm/yyyy" />
+                                        Format="dd/mm/yyyy"
+                                        Background="#000" />
                         </HorizontalStackLayout>
                     </VerticalStackLayout>                  
                 </Frame>
 
-                <Button Text="Avançar" />
+                <Button Text="Avançar" 
+                        Margin="0,10,0,10"
+                        Background="#3b60e4"
+                        TextColor="#FFF" />
+                
+                <Button Text="Sobre" 
+                        Margin="0,10,0,0" 
+                        Clicked="Button_Clicked"  
+                        Background="#3b60e4"
+                        TextColor="#FFF"/>
 
 
             </VerticalStackLayout>
