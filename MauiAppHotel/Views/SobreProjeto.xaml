@@ -19,12 +19,13 @@
                FontFamily="PoppinsLight"/>
 
 
-        <Button Text="Voltar" 
+        <Button Clicked="Button_Clicked_1"
+                Text="Voltar" 
                 Margin="10,310,10,25"
                 Background="#3b60e4"
                 TextColor="#FFF" />
 
-        <Label Text="© 2024 Todos os direito reservados" 
+        <Label Text="© 2024 Todos os direito reservados." 
                HorizontalOptions="Center"
                FontFamily="PoppinsLight" />
 

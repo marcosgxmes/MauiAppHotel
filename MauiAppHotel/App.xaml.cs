@@ -9,13 +9,13 @@ namespace MauiAppHotel
         {
             new Quarto()
             {
-                Descricao = "Suíte de Luxo",
+                Descricao = "Suíte Deluxe",
                 ValorDiariaAdulto = 100.0,
                 ValorDiariaCriaca = 75.0
             },
             new Quarto()
             {
-                Descricao = "Suíte com Hidromassagem",
+                Descricao = "Suíte Premium",
                 ValorDiariaAdulto = 130.0,
                 ValorDiariaCriaca = 80.0
             },
@@ -27,10 +27,16 @@ namespace MauiAppHotel
             },
             new Quarto()
             {
-                Descricao = "Suíte Super Star",
+                Descricao = "Suíte Master",
                 ValorDiariaAdulto = 150.0,
                 ValorDiariaCriaca = 75.0
             },
+            new Quarto()
+            {
+                Descricao = "Suíte Elite",
+                ValorDiariaAdulto = 150.0,
+                ValorDiariaCriaca = 75.0
+            }
 
          };
 
